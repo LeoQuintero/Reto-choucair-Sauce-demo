@@ -5,7 +5,12 @@ import net.thucydides.core.annotations.DefaultUrl;
 
 @DefaultUrl("https://www.saucedemo.com/")
 
-public class RealizarCompraPage extends PageObject {
+public class SaucedemoLoginPage extends PageObject {
 
 
+    public void ingresarDatos(String strUsuario, String strPass) {
+    }
+
+    public void verificaHome() {
+    }
 }

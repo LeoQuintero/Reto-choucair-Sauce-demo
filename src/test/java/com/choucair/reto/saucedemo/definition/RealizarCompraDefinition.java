@@ -1,6 +1,5 @@
 package com.choucair.reto.saucedemo.definition;
 
-import com.choucair.reto.saucedemo.pageobjets.RealizarCompraPage;
 import com.choucair.reto.saucedemo.steps.RealizarCompraSteps;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
