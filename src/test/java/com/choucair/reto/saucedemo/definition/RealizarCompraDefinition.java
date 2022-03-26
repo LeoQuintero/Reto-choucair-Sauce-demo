@@ -1,6 +1,7 @@
 package com.choucair.reto.saucedemo.definition;
 
 import com.choucair.reto.saucedemo.steps.RealizarCompraSteps;
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -25,18 +26,28 @@ public class RealizarCompraDefinition {
     }
 
     @When("Agrego el primer producto backpack")
-    public void agregoElPrimerProductoBackpack(){}
+    public void agregoElPrimerProductoBackpack() {
+        realizarCompraSteps.agregarProducto1();
+    }
 
     @And("Ingreso al carrito de compras")
-    public void ingresoAlCarritoDeCompras(){}
+    public void ingresoAlCarritoDeCompras(){
+        realizarCompraSteps.validarProducto1Carrito();
+    }
 
     @And("Realizo la validación de la compra con el botón CHECKOUT")
-    public void realizoLaValidacionDeLaCompraConElBotonCheckout() {}
+    public void realizoLaValidacionDeLaCompraConElBotonCheckout() {
+        realizarCompraSteps.validarCompra();
+    }
 
-    @When("Dilegencia el formulario de CHECKOUT")
-    public void diligenciaElFormularioDeCheckout(){}
+    @When("Dilegencia el formulario de comprador")
+    public void diligenciaElFormularioDeComprador() {
+        realizarCompraSteps.diligenciarFormulario();
+    }
 
     @Then("Verifico los datos de compra exitoso")
-    public void verificoLosDatosDeCompraExitoso() {}
+    public void verificoLosDatosDeCompraExitoso() throws Throwable {
+        throw new PendingException();
+    }
 
 }

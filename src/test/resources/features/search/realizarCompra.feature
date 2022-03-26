@@ -8,5 +8,7 @@ Feature: Compra exitosa
     When Agrego el primer producto backpack
     And Ingreso al carrito de compras
     And Realizo la validación de la compra con el botón CHECKOUT
-    When Dilegencia el formulario de CHECKOUT
+    When DilIgencia el formulario de comprador
+      |First Name|Last Name|Zip/Postal Code|
+      |Leonardo  |Quinero  |111621         |
     Then Verifico los datos de compra exitoso
